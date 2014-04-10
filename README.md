@@ -32,6 +32,7 @@ Quick Start
 Options
 -------
 **categories: ['internal', 'external', 'download', 'email', 'telephone']**
+
 Set the type of links you'd like to track. For instance, if you wish to only track external 
 links then instantiate the library with:
 
@@ -42,16 +43,20 @@ $.clicky({
 ```
 
 **categoryName: 'link:'**
+
 This is the prepended string to the Google Analytics category name. With the default setting, 
 GA categories will look like - link:internal, link:external, etc...
 
 **action: 'click'**
+
 Google Analytics event action string name.
 
 **downloadFileTypes: /\.(zip|exe|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i**
+
 Regex of matched file extensions that will be treated as a download link.
 
-disableClass: 'noclicky'
+**disableClass: 'noclicky'**
+
 Disable event tracking by add the 'noclickly' link.
 
 ```
