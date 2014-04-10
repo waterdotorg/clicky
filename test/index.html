@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Clicky Test</title>
+    </head>
+    <body>
+        <h1>jQuery Clicky Test Page</h1>
+        <div id="main">
+            <ul>
+                <li>
+                    <a href="#internal">Internal</a>
+                </li>
+                <li>
+                    <a href="https://github.com/vincecarney/">External</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/vincecarney/">External Blank</a>
+                </li>
+                <li><a href="">Empty</a></li>
+                <li>
+                    <a href="/foobar.pdf">PDF</a>
+                </li>
+                <li>
+                    <a href="tel:1234567890">Telephone</a>
+                </li>
+                <li>
+                    <a class="noclicky" href="https://github.com/vincecarney/">No Event Tracking</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer"></div>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="/jquery.simulate.js"></script>
+        <script src="/jquery.clicky.js"></script>
+        <script>
+            var ga = function(params) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                console.log("ga(" + args.join(',') + ");");
+            };
+            ga.loaded = true;
+
+            $(function() {
+              $.clicky();
+            });
+        </script>
+    </body>
+</html>
