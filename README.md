@@ -57,7 +57,9 @@ Regex of matched file extensions that will be treated as a download link.
 
 **disableClass: 'noclicky'**
 
-Disable event tracking by add the 'noclickly' link.
+Add the class 'noclicky' on a link to disable event tracking.
+
+Here's an example of all options:
 
 ```
 $.clicky({
