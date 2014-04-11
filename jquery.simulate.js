@@ -105,7 +105,13 @@ $.extend($.simulate.prototype, {
 		if (el.dispatchEvent) {
 			el.dispatchEvent(evt);
 		} else if (el.fireEvent) {
-			el.fireEvent('on' + type, evt);
+			if  ((document.documentMode || 100) == 8 && type == 'click') {
+				// Hello ie8
+				el.click();
+			}
+			else {
+				el.fireEvent('on' + type, evt);
+			}
 		}
 		return evt;
 	},
